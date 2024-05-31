@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    min-height: 100vh;
+    background: #13141F;
+  }
+  
+  .clock {
+    width: 350px;
+    height: 350px;
+    background: url(./Roman-Clock.png);
+    background-size: cover;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 50%;
+    border: 4px solid #D6FE7A;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+      inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+      0 15px 15px rgba(255, 255, 255, 0.03),
+      inset 0 15px 15px rgba(255, 255, 255, 0.03);
+  }
+  
+  .clock::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+  
+    background: #D6FE7A;
+    border-radius: 50%;
+    z-index: 999;
+  }
+  
+  .clock .hour,
+  .clock .min,
+  .clock .sec {
+    position: absolute;
+  }
+  
+  .clock .hour,
+  .hr {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .clock .min,
+  .mn {
+    width: 190px;
+    height: 190px;
+  }
+  
+  .clock .sec,
+  .sc {
+    width: 230px;
+    height: 230px;
+  }
+  
+  .hr,
+  .mn,
+  .sc {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .clock .hr::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 80px;
+  
+    background: #f65d46;
+    border-radius: 6px;
+    z-index: 10;
+  }
+  
+  .clock .mn::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 90px;
+  
+    background: #FFA95D;
+    border-radius: 6px;
+    z-index: 11;
+  }
+  
+  .clock .sc::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 150px;
+  
+    background: #D6FE7A;
+    border-radius: 6px;
+    z-index: 12;
+  }
